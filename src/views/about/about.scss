@@ -1,0 +1,34 @@
+@import '../../styles/style.scss';
+.about {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.header__title {
+  text-align: center;
+}
+
+// Section articles
+
+.section__title {
+  text-transform: uppercase;
+}
+.section__text {
+  margin: 10px 0;
+}
+
+// Media query responsive
+@media screen and (max-width: 600px) {
+  .about {
+    padding-bottom: 140px;
+    width: 90%;
+    font-size: 1.2rem;
+  }
+  .section__title {
+    color: $blue;
+    text-align: center;
+  }
+  .section__text {
+    font-weight: 600;
+  }
+}

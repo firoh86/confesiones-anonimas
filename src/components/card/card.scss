@@ -1,0 +1,49 @@
+@import '../../styles/style.scss';
+.card {
+  width: 100%;
+  color: $font-color;
+  box-sizing: content-box;
+  border-left: 1px solid $blue;
+  margin-bottom: 4rem;
+  padding-left: 4px;
+  transition: background-color 0.1s;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    padding: 8px 0;
+  }
+  &__nickname {
+    font-size: 1.2rem;
+    color: $blue;
+  }
+  &__body {
+    padding: 20px;
+
+    color: $font-color-dark;
+    font-size: 1.2rem;
+  }
+
+  &__input-field {
+    min-width: 250px;
+    width: 100%;
+  }
+
+  &__input {
+    box-sizing: content-box;
+    padding: 10px;
+    outline: none;
+    font-weight: 600;
+    width: 100%;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    color: $font-color-dark;
+  }
+}

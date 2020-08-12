@@ -1,0 +1,27 @@
+@import '../../styles/style.scss';
+.home {
+  width: 80%;
+  margin: 0 auto;
+  &__title {
+    text-align: center;
+    font-size: 2rem;
+    // font-family: $font-titles;
+    color: $font-color-dark;
+  }
+}
+// Media query responsive
+@media screen and (max-width: 600px) {
+  .home {
+    width: 90%;
+  }
+}
+@media (min-width: 601px) and (max-width: 1199px) {
+  .home {
+    width: 60%;
+  }
+}
+@media (min-width: 1200px) {
+  .home {
+    width: 40%;
+  }
+}

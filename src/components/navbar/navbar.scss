@@ -1,0 +1,90 @@
+@import '../../styles/style.scss';
+
+.header-button {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  height: 60px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  border: none;
+  color: $font-color;
+  background-color: $black;
+  font-weight: 600;
+  font-size: 1.6rem;
+  outline: none;
+  &:hover {
+    color: $blue;
+  }
+}
+// Showmenu boolean realtime class
+.navbar-container {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  // 100* every-element
+  top: -300px;
+  transition: top 0.4s ease;
+}
+.showmenu {
+  top: 60px;
+}
+
+.navbar__link {
+  display: block;
+  background-color: $black;
+  color: $font-color;
+  padding: 15px 20px;
+  text-decoration: none;
+  font-weight: 400;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+.link-icon {
+  margin: 0 20px;
+}
+.navigation,
+.user-navigation {
+  border-top: 1px solid $blue;
+}
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (min-width: 600px) {
+  .header-button {
+    display: none;
+    position: relative;
+  }
+  .navbar-container {
+    width: 100vw;
+    position: fixed;
+    top: -1px;
+    display: flex;
+  }
+  .navigation {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: none;
+  }
+  .user-navigation {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: none;
+  }
+  .navbar__link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-right: 1px solid $background-color;
+    background-color: $black;
+    &:hover {
+      color: $blue;
+    }
+  }
+}

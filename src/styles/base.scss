@@ -1,0 +1,70 @@
+// Buttons
+.button {
+  background: none;
+  // border-radius: 5px;
+  border: 2px solid $blue;
+  color: $blue;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 10px;
+  &:hover {
+    cursor: pointer;
+    color: $black;
+    background-color: $blue;
+  }
+}
+.button-text {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  background-color: transparent;
+  border: none;
+  color: $blue;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+// Containers
+.container {
+  width: 100%;
+
+  color: $font-color-dark;
+  font-weight: 600;
+  padding: 0.4rem 0;
+  &--top {
+    margin-top: 80px;
+  }
+  &--bottom {
+    margin-bottom: 80px;
+  }
+}
+
+// Aligns
+
+.vertical-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.horizontal-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.link {
+  text-decoration: none;
+  font-weight: 600;
+  color: $blue;
+}
+
+// Media query responsive
+@media screen and (max-width: 600px) {
+  .container--bottom {
+    margin-bottom: 120px;
+  }
+}
