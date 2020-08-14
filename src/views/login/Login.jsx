@@ -1,36 +1,29 @@
 import React, { useState } from 'react';
+import Auth from '../../hooks/Auth';
 import './login.scss';
-const Landing = () => {
-  const [loginForm, setLoginForm] = useState(true);
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPasword] = useState('');
+const Login = () => {
+  const [loginForm, setLoginForm] = useState(false);
+  // loginInputs
+  const [
+    name,
+    bindName,
+    email,
+    bindMail,
+    password,
+    bindPassword,
+    repassword,
+    binRePassword,
+  ] = Auth('');
 
-  const handleLoginForm = (e) => {
+  // Handle forms functions
+  const loginHandle = (e) => {
+    console.log(email, password);
     e.preventDefault();
-    setLoginForm(!loginForm);
-  };
-
-  const handleChange = (e) => {
-    console.log(e.target.name);
-    switch (e.target.name) {
-      case 'name':
-        setName(e.target.value);
-        break;
-      case 'email':
-        setEmail(e.target.value);
-        break;
-      case 'password':
-        setPasword(e.target.value);
-        break;
-      default:
-        break;
-    }
   };
 
   return (
     <div className="login">
-      <form action="login-form" className="login__form">
+      <form onSubmit={loginHandle} className="login__form">
         {loginForm ? (
           <h1 className="header__title login-form__title">
             Registrate como usuario
@@ -47,30 +40,36 @@ const Landing = () => {
                 type="text"
                 placeholder="Nombre"
                 className="form-input"
-                onChange={handleChange}
-                name="name"
+                {...bindName}
                 value={name}
               />
             </div>
           )}
           <div className="input-field">
             <input
-              type="text"
+              type="email"
               placeholder="Email"
-              onChange={handleChange}
+              {...bindMail}
               className="form-input"
-              name="email"
               value={email}
             />
           </div>
           <div className="input-field">
             <input
-              type="text"
+              type="password"
               placeholder="Contraseña"
               className="form-input"
-              onChange={handleChange}
-              name="password"
+              {...bindPassword}
               value={password}
+            />
+          </div>
+          <div className="input-field">
+            <input
+              type="password"
+              placeholder="Repite la Contraseña"
+              className="form-input"
+              {...binRePassword}
+              value={repassword}
             />
           </div>
           {!loginForm ? (
@@ -79,24 +78,36 @@ const Landing = () => {
                 <input type="checkbox" />
                 <label className="form-input">Mantenme logeado</label>
               </div>
-              <button className="form-button button">Entrar</button>
+              <button className="form-button button" onSubmit={loginHandle}>
+                Entrar
+              </button>
             </>
           ) : (
-            <button className="form-button button">Registrar</button>
+            <button className="form-button button" onSubmit={loginHandle}>
+              Registrar
+            </button>
           )}
         </div>
         <div className="login-form__body">
-          <button className=" button-text " title="recuperar contraseña">
-            ¿Has olvidado la contraseña?
-          </button>
           {loginForm ? (
-            <button className="button form-button" onClick={handleLoginForm}>
+            <button
+              className="button form-button"
+              onClick={() => setLoginForm(!loginForm)}
+            >
               Logeate
             </button>
           ) : (
-            <button className="button form-button" onClick={handleLoginForm}>
-              Registrate
-            </button>
+            <>
+              <button className=" button-text " title="recuperar contraseña">
+                ¿Has olvidado la contraseña?
+              </button>
+              <button
+                className="button form-button"
+                onClick={() => setLoginForm(!loginForm)}
+              >
+                Registrate
+              </button>
+            </>
           )}
         </div>
       </form>
@@ -104,4 +115,4 @@ const Landing = () => {
   );
 };
 
-export default Landing;
+export default Login;

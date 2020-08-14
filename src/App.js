@@ -8,8 +8,8 @@ import About from './views/about/About';
 import Login from './views/login/Login';
 import Profile from './views/profile/Profile';
 // Components
-
 import Footer from './components/footer/Footer';
+
 function App() {
   return (
     <div className="app">

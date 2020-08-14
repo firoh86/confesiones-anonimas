@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
-import './index.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import './index.scss';
 
+// firebase npm install reactfire@next soporta hooks
+import { FirebaseAppProvider } from 'reactfire';
+import firebaseconfig from './firebase/fire';
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <FirebaseAppProvider firebaseCinfig={firebaseconfig}>
+      <Suspense fallback={<p>Calentando los burritos...</p>}>
+        <App />
+      </Suspense>
+    </FirebaseAppProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
