@@ -13,7 +13,7 @@ const Card = () => {
     <div className="card vertical-center">
       <div className="card__header" onClick={() => handleShowMenu()}>
         <span className="card__nickname">Nickname</span>
-        <span>Fecha de publicacion</span>
+        <span className="card__date">Fecha de publicacion</span>
       </div>
       <div className="card__body" onClick={() => handleShowMenu()}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias quo

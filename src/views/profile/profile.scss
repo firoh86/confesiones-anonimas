@@ -1,6 +1,5 @@
 @import '../../styles/style.scss';
 .profile {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,18 +8,17 @@
     padding: 2rem 0;
   }
   &__image__container {
-    max-width: 200px;
-    max-height: 200px;
-    border-radius: 50%;
+    max-width: 150px;
+    max-height: 150px;
     padding: 2px;
-    background-color: $blue;
+    border-radius: 50%;
   }
   &__image {
-    border-radius: 50%;
     max-width: 100%;
   }
   &__button {
     margin-top: 1rem;
+    min-width: 150px;
   }
 }
 .quote {
@@ -28,12 +26,29 @@
   width: 80%;
   text-align: center;
   &__icon {
-    color: $blue;
+    color: $highlighted;
     font-size: 2rem;
     margin-right: 10px;
   }
 }
+// Edit mode
+.avatars {
+  width: 100%;
+  padding: 2rem;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 
+  &__choice {
+    cursor: pointer;
+    max-width: 100%;
+    &:hover {
+      background-color: $highlighted;
+      border-radius: 50%;
+    }
+  }
+}
 // Media query responsive
 @media screen and (max-width: 600px) {
   .quote {

@@ -23,6 +23,7 @@ const Navbar = () => {
     <>
       <button className="header-button" onClick={() => handleShow()}>
         <span>Menu</span>
+
         {showMenu ? (
           <FontAwesomeIcon icon={faTimes} />
         ) : (

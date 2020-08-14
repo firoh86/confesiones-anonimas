@@ -1,14 +1,14 @@
 @import '../../styles/style.scss';
 .card {
   width: 100%;
-  color: $font-color;
+  color: $font-color-primary;
   box-sizing: content-box;
-  border-left: 1px solid $blue;
+  border-left: 1px solid $highlighted;
   margin-bottom: 4rem;
   padding-left: 4px;
   transition: background-color 0.1s;
   &:hover {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: $shadow-color;
     cursor: pointer;
   }
 
@@ -21,12 +21,15 @@
   }
   &__nickname {
     font-size: 1.2rem;
-    color: $blue;
+    color: $highlighted;
+  }
+  &__date {
+    color: $font-color-secondary;
   }
   &__body {
     padding: 20px;
 
-    color: $font-color-dark;
+    color: $font-color-secondary;
     font-size: 1.2rem;
   }
 
@@ -44,6 +47,6 @@
     background: none;
     border: none;
     font-size: 1rem;
-    color: $font-color-dark;
+    color: $font-color-secondary;
   }
 }

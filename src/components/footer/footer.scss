@@ -9,10 +9,10 @@
   justify-content: space-around;
   align-items: center;
   background-color: $black;
-  color: $font-color;
+  color: $font-color-primary;
   padding: 1rem 0;
   &__link {
-    color: $blue;
+    color: $highlighted;
     text-decoration: none;
     font-weight: bold;
   }

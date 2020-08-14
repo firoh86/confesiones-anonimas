@@ -1,17 +1,22 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 $font-titles: 'Anton', sans-serif;
-// Colors
+
+// Light-mode
 
 $background-color: #272d38;
-$font-color: #eeeeee;
-$font-color-dark: #eeeeee;
-$blue: #4adbf9;
+$font-color-primary: #eeeeee;
+$font-color-secondary: #eeeeee;
+$highlighted: #4adbf9;
 $black: #08090b;
 
-/* // colores 2
-$background-color: #ffffff;
-$font-color: #eeeeee;
-$font-color-dark: #272d38;
-$blue: #10c882;
+// dark-mode
+
+/* $background-color: #ffffff;
+$font-color-primary: #e4dcdc;
+$font-color-secondary: #262627;
+$highlighted: #10c882;
 $black: #0d423e; */
+
+// Shadow
+$shadow-color: rgba(0, 0, 0, 0.3);

@@ -2,15 +2,15 @@
 .button {
   background: none;
   // border-radius: 5px;
-  border: 2px solid $blue;
-  color: $blue;
+  border: 2px solid $highlighted;
+  color: $highlighted;
   font-weight: bold;
   font-size: 1rem;
   padding: 10px;
   &:hover {
     cursor: pointer;
     color: $black;
-    background-color: $blue;
+    background-color: $highlighted;
   }
 }
 .button-text {
@@ -21,7 +21,7 @@
   font-size: 1.2rem;
   background-color: transparent;
   border: none;
-  color: $blue;
+  color: $highlighted;
   &:hover {
     cursor: pointer;
   }
@@ -30,15 +30,14 @@
 // Containers
 .container {
   width: 100%;
-
-  color: $font-color-dark;
+  color: $font-color-secondary;
   font-weight: 600;
   padding: 0.4rem 0;
   &--top {
     margin-top: 80px;
   }
   &--bottom {
-    margin-bottom: 80px;
+    margin-bottom: 120px;
   }
 }
 
@@ -59,7 +58,7 @@
 .link {
   text-decoration: none;
   font-weight: 600;
-  color: $blue;
+  color: $highlighted;
 }
 
 // Media query responsive
@@ -67,4 +66,20 @@
   .container--bottom {
     margin-bottom: 120px;
   }
+}
+// inputs & forms
+.input-field {
+  border-bottom: 1px solid $highlighted;
+  padding: 10px 0;
+  min-width: 250px;
+}
+
+.form-input {
+  outline: none;
+  font-weight: 600;
+  min-width: 250px;
+  color: $font-color-secondary;
+  background: none;
+
+  border: none;
 }

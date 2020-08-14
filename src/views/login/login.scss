@@ -4,6 +4,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  &__form {
+    min-height: 500px;
+  }
 }
 .login-form {
   width: 100vw;
@@ -11,7 +14,7 @@
   flex-direction: column;
   justify-content: space-around;
   &__title {
-    color: $font-color-dark;
+    color: $font-color-secondary;
   }
 
   &__body {
@@ -23,21 +26,7 @@
     margin-bottom: 1px;
   }
 }
-.input-field {
-  border-bottom: 1px solid $blue;
-  padding: 10px 0;
-  min-width: 250px;
-}
 
-.form-input {
-  outline: none;
-  font-weight: 600;
-  min-width: 250px;
-  color: $font-color-dark;
-  background: none;
-
-  border: none;
-}
 .form-button {
   margin-top: 20px;
   min-width: 250px;
